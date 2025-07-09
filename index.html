@@ -22,34 +22,87 @@
           <p>The Unix shell is a command-line environment for interacting with your operating system, typically macOS or Linux.</p>
           <p>It allows you to launch programs, manage files, and much more, all through a terminal interface.</p>
             <code>echo "Hello, world!"</code>
-            <p>Instead of clicking around with a mouse, the shell lets you tell your computer what to do by typing words and commands.</p>
-            <p>This document touches on the basics of:</p>
-            <ul>
-              <li>Navigating directories</li>
-              <li>Working with files</li>
-              <li>Viewing file content</li>
-              <li>And useful tips and tricks</li>
-            </ul>
+          <p>Instead of clicking around with a mouse, the shell lets you tell your computer what to do by typing words and commands.</p>
+          <p>This document touches on the basics of:</p>
+          <ul>
+            <li>Navigating directories</li>
+            <li>Working with files</li>
+            <li>Viewing file content</li>
+            <li>And useful tips and tricks</li>
+          </ul>
       </section>
       <section id="Navigating_Directories" class="main-section">
         <header>Navigating Directories</header>
-          <p></p>
-          <p></p>
+        <p>In the Unix shell, you often need to move around between different folders (called directories) to work with your files.</p>
+        <p>Some basic commands help you check where you are, list files, and change your location in the filesystem.</p>
+          <code>pwd</code>
+        <p>The command above prints the current working directory, showing you the path to your current folder.</p>
+          <code>ls</code>
+        <p>This lists all files and folders in the current directory. You can add options to show more details.</p>
+        <ul>
+          <li><code>cd foldername</code> - change into a specific folder</li>
+          <li><code>cd ..</code> - go up one level to the parent directory</li>
+          <li><code>ls -l</code> - list files in long format with details</li>
+          <li><code>ls -a</code> - show hidden files and folders</li>
+        </ul>
+        <p>These commands are the foundation for moving around and managing files from the command line.</p>
       </section>
       <section id="Working_with_Files" class="main-section">
         <header>Working with Files</header>
-          <p></p>
-          <p></p>
+          <p>The Unix shell lets you create, view, copy, move, and delete files quickly using commands.</p>
+          <p>Instead of using a graphical interface which you may be used to, you can type commands to handle files right from the terminal.</p>
+            <code>touch newfile.txt</code>
+          <p>This creates an empty file called <code>newfile.txt</code> if it doesn't already exist.</p>
+            <code>cp file1.txt file2.txt</code>
+          <p>This copies <code>file1.txt</code> to a new file called <code>file2.txt</code>.</p>
+            <code>mv file1.txt Documents/</code>
+          <p>This moves <code>file1.txt</code> into the Documents directory. It can also rename files if you provide a new name.</p>
+          <ul>
+            <li><code>rm filename</code> - delete a file</li>
+            <li><code>cat filename</code> - print file contents to the terminal</li>
+            <li><code>nano filename</code> - open a file for editing in a terminal text editor</li>
+            <li><code>cp -r folder1 folder2</code> - copy entire folders</li>
+            <li><code>mv oldname.txt newname.txt</code> - rename a file</li>
+          </ul>
+          <p>Using these commands, you can quickly manage many files without leaving the command line.</p>
       </section>
       <section id="Viewing_File_Content" class="main-section">
         <header>Viewing File Content</header>
-          <p></p>
-          <p></p>
+          <p>The Unix shell provides many commands to look inside files without opening them in a full editor.</p>
+          <p>This is useful for quickly checking logs, configuration files, or code.</p>
+            <code>cat filename.txt</code>
+          <p>This prints the entire contents of a file directly in the terminal.</p>
+            <code>less filename.txt</code>
+          <p>This opens a file in a scrollable viewer so you can move up and down easily.</p>
+            <code>head filename.txt</code>
+          <p>Displays just the first few lines of a file, useful for a quick peek.</p>
+            <code>tail filename.txt</code>
+          <p>Shows the last few lines of a file, helpful for checking logs.</p>
+          <ul>
+            <li><code>tail -f filename</code> - watch new lines appear in a growing file like logs</li>
+            <li><code>less +F filename</code> - view a file and follow new changes like a live log viewer</li>
+            <li><code>head -n 20 filename</code> - show the first 20 lines of a file</li>
+            <li><code>cat file1 file2</code> - display multiple files at once</li>
+            <li><code>less -N filename</code> - view a file with line numbers</li>
+          </ul>
+          <p>These commands make it quick and easy to read file contents directly from the command line.</p>
       </section>
       <section id="Useful_Tips" class="main-section">
         <header>Useful Tips</header>
-          <p></p>
-          <p></p>
+          <p>Besides basic commands, the Unix shell has many small features and shortcuts that can make your work much faster and easier.</p>
+          <p>One of the most helpful tools is <strong>tab completion</strong>. When typing a file or folder name, you can press the <code>Tab</code> key to automatically complete it or show suggestions.</p>
+            <code>cd Doc</code>
+          <p>Pressing <code>Tab</code> after typing <code>Doc</code> might complete it to <code>Documents/</code> if that folder exists.</p>
+          <p>Here are some other useful tips for working in the shell:</p>
+          <ul>
+            <li>Use the up and down arrow keys to scroll through your recent commands instead of typing them again.</li>
+            <li>Type <code>history</code> to see a list of past commands.</li>
+            <li>Press <code>Ctrl + C</code> to stop a running command.</li>
+            <li>Use <code>clear</code> to clear your terminal screen.</li>
+            <li>Use <code>..</code> to move up one directory level, e.g. <code>cd ..</code></li>
+            <li>Use <code>man command</code> to read the manual page and learn how a command works.</li>
+          </ul>
+          <p>Practicing these small shortcuts helps make using the shell feel much faster and more comfortable.</p>
       </section>
     </main>
   </body>
